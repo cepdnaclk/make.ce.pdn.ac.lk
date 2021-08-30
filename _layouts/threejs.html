@@ -34,7 +34,7 @@
         velx: 0,
         vely: 0,
         camera: {
-            speed: 0.15,
+            speed: 0.0,
             distance: 50,
         },
         stop: function() {
@@ -118,16 +118,16 @@
         // scene.add(window.cube);
 
 
-        var gui = new dat.GUI();
-
-        var cam = gui.addFolder('Camera');
-        cam.add(options.camera, 'speed', -0.5, 0.5).listen();
-        cam.add(options.camera, 'distance', 10, 100).listen();
-        cam.add(camera.position, 'z', -100, 100).listen();
-        cam.open();
-
-        gui.add(options, 'stop');
-        gui.add(options, 'reset');
+        // var gui = new dat.GUI();
+        //
+        // var cam = gui.addFolder('Camera');
+        // cam.add(options.camera, 'speed', -0.5, 0.5).listen();
+        // cam.add(options.camera, 'distance', 10, 100).listen();
+        // cam.add(camera.position, 'z', -100, 100).listen();
+        // cam.open();
+        //
+        // gui.add(options, 'stop');
+        // gui.add(options, 'reset');
     }
 
     function onWindowResize() {
@@ -140,10 +140,10 @@
 
     function render() {
 
-        var timer = Date.now() * options.camera.speed*0.001;
-        camera.position.x = Math.cos(timer) * options.camera.distance;
-        camera.position.y = Math.sin(timer) * options.camera.distance;
-        camera.lookAt(scene.position);
+        // var timer = Date.now() * options.camera.speed*0.001;
+        // camera.position.x = Math.cos(timer) * options.camera.distance;
+        // camera.position.y = Math.sin(timer) * options.camera.distance;
+        // camera.lookAt(scene.position);
 
         renderer.render( scene, camera );
         // window.controls.update();
