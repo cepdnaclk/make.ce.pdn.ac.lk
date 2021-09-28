@@ -22,8 +22,8 @@ plugins:
 ga_tracking:
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
-gh_edit_repository: ""
-gh_edit_branch: ""
+gh_edit_repository: "https://github.com/cepdnaclk/makerspace"
+gh_edit_branch: "main"
 
 permalink: pretty
 exclude:
