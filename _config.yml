@@ -14,13 +14,16 @@ minima:
   date_format: "%b %-d, %Y"
 
 plugins:
- - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
+ # - jekyll-feed
 
 # Google Analytics Tracking (optional)
 ga_tracking:
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+gh_edit_repository: ""
+gh_edit_branch: ""
 
 permalink: pretty
 exclude:

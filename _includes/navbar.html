@@ -10,18 +10,16 @@
                 <li class="nav-item px-3 pr-5"><a class="nav-link" href="{{ site.baseurl }}{{ '/' | realtive_url }}">Home</a></li>
                 <li class="nav-item px-3 pr-5"><a class="nav-link" href="{{ site.baseurl }}{{ '/design/' | realtive_url }}">Design</a></li>
 
-                <li class="nav-item dropdown px-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                        <a class="dropdown-item" href="#">Item 3</a>
-
-                    </ul>
-                </li>
-
+                <!-- <li class="nav-item dropdown px-3"> -->
+                <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+                <!-- Dropdown -->
+                <!-- </a> -->
+                <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+                <!-- <a class="dropdown-item" href="#">Item 1</a> -->
+                <!-- <a class="dropdown-item" href="#">Item 2</a> -->
+                <!-- <a class="dropdown-item" href="#">Item 3</a> -->
+                <!-- </ul> -->
+                <!-- </li> -->
 
                 <li class="nav-item px-3"><a class="nav-link" href="{% link pages/about.md %}">About</a></li>
             </ul>
@@ -30,6 +28,14 @@
             <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
             <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
             <!-- </form> -->
+
+            {% if page.gh_link -%}
+            <span class="navbar-text">
+                <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.gh_link }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
+                    <i class="fa fa-github fa-13"></i> Edit on GitHub
+                </a>
+            </span>
+            {% endif -%}
         </div>
     </div>
 </nav>
