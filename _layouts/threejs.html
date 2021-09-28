@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+
+    <link type="text/css" rel="stylesheet" href="{{ '/assets/css/three.css' | relative_url }}">
+
+    {% include meta.html %}
+
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include analytics.html -%}
+    {%- endif -%}
+</head>
+<body style="padding: 0 !important; margin:0 !important">
+    <div id="container"></div>
+
+    <script src="{{ '/assets/js/threeJS/three.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/threeJS/STLLoader.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/threeJS/detector.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/threeJS/orbitController.js' | relative_url }}"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'></script>
+
+    <script type="module">
+
+    if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+    var camera, scene, renderer;
+
+    var options = {
+        velx: 0,
+        vely: 0,
+        camera: {
+            speed: 0.0,
+            distance: 50,
+        },
+        stop: function() {
+            this.camera.speed = 0;
+        },
+        reset: function() {
+            this.camera.speed = 0.3;
+            this.camera.distance = 50;
+            camera.position.z = 30;
+        }
+    };
+    init();
+
+    function init() {
+
+        scene = new THREE.Scene();
+        scene.add( new THREE.AmbientLight( 0x999999 ) );
+
+        // PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
+        camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 500 );
+        camera.up.set( 0, 0, 1 );
+        camera.position.set( 0, -30, 30 );
+
+        camera.add( new THREE.PointLight( 0xffffff, 0.8 ) );
+        scene.add( camera );
+
+        // GridHelper( size : number, divisions : Number, colorCenterLine : Color, colorGrid : Color )
+        var grid = new THREE.GridHelper( 24, 48, 0xcccccc, 0x7d7d7d );
+        grid.rotateOnAxis( new THREE.Vector3( 1, 0, 0 ), 90 * ( Math.PI/180 ) );
+        scene.add( grid );
+
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setClearColor( 0x999999 );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        var loader = new THREE.STLLoader();
+
+        // MeshPhongMaterial
+        var material = new THREE.{{ page.material.type }}( {{ page.material.properties | jsonify }} );
+
+        const url = '{{ page.file }}';
+
+        loader.load(url, function ( geometry ) {
+            var mesh = new THREE.Mesh( geometry, material );
+
+            const posX = {{ page.position.x }};
+            const posY = {{ page.position.y }};
+            const posZ = {{ page.position.z }};
+
+            const scaleX = {{ page.scale.x }}*0.1;
+            const scaleY = {{ page.scale.y }}*0.1;
+            const scaleZ = {{ page.scale.z }}*0.1;
+
+            const rotateX = {{ page.rotate.x }}*(Math.PI/180);
+            const rotateY = {{ page.rotate.y }}*(Math.PI/180);
+            const rotateZ = {{ page.rotate.z }}*(Math.PI/180);
+
+            mesh.position.set(posX, posY, posZ);
+            mesh.rotation.set(rotateX, rotateY, rotateZ);
+            mesh.scale.set(scaleX, scaleY, scaleZ);
+
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+
+            scene.add( mesh );
+            render();
+        });
+
+        window.controls = new THREE.OrbitControls( camera, renderer.domElement );
+        window.controls.addEventListener( 'change', render );
+        window.controls.target.set( 0, 0, 4.5 );
+        window.controls.update();
+        window.addEventListener( 'resize', onWindowResize, false );
+
+        window.controls.autoRotate = true;
+        // window.controls.autoRotateSpeed = 0.5;
+        // var cube = new THREE.Mesh(geometry, material);
+        // window.cube =  new THREE.Mesh(geometry, material);
+        // scene.add(window.cube);
+
+
+        // var gui = new dat.GUI();
+        //
+        // var cam = gui.addFolder('Camera');
+        // cam.add(options.camera, 'speed', -0.5, 0.5).listen();
+        // cam.add(options.camera, 'distance', 10, 100).listen();
+        // cam.add(camera.position, 'z', -100, 100).listen();
+        // cam.open();
+        //
+        // gui.add(options, 'stop');
+        // gui.add(options, 'reset');
+    }
+
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        render();
+
+    }
+
+    function render() {
+
+        // var timer = Date.now() * options.camera.speed*0.001;
+        // camera.position.x = Math.cos(timer) * options.camera.distance;
+        // camera.position.y = Math.sin(timer) * options.camera.distance;
+        // camera.lookAt(scene.position);
+
+        renderer.render( scene, camera );
+        // window.controls.update();
+        // window.cube.rotation.x += options.velx;
+        // window.cube.rotation.y += options.vely;
+
+        camera.updateMatrixWorld();
+        requestAnimationFrame(render);
+    }
+
+    </script>
+</body>
+</html>
