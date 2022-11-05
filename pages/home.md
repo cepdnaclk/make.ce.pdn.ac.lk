@@ -6,4 +6,6 @@ permalink: /
 
 # CE MakerSpace Wiki
 
-This site is under construction. Please come back later.
+## Layout
+
+<img class="img-fluid" src="{{ '/assets/img/MakerSpaceLayout.jpg' | relative_url }}">

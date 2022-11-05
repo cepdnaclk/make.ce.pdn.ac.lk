@@ -1,9 +1,16 @@
-<footer class="mt-5">
-    <div class="">
-        Department of Computer Engineering - University of Peradeniya
+{%- comment -%}
+This is the footer used in every page
+{%- endcomment -%}
+
+<footer class="mt-3 pt-3 pb-4 bg-dark">
+    <div class="container">
+        <p class="m-2 text-center text-white">
+            Department of Computer Engineering - University of Peradeniya
+        </p>
+        <p class="text-center text-muted">
+            <!-- <a class="text-decoration-none small footer-link" href="{{ '/documentation/' | relative_url }}">
+                Documentation</a> | -->
+            <span class="small">Last Build: {{site.time | date: "%d-%m-%Y" }}</span>
+        </p>
     </div>
-    <p>
-        <br>
-        <a class="text-decoration-none" href="#">Back to top</a>
-    </p>
 </footer>
