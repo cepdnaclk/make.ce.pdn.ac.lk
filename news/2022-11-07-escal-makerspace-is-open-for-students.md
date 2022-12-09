@@ -9,9 +9,11 @@ navbar_active: News
 nav_order: 1
 
 link_url: http://www.ce.pdn.ac.lk/2022/11/07/escal-makerspace-is-open-for-students/
-link_caption: Read More
+link_caption: This news is originally published on ce.pdn.ac.lk
 
 author: Isara Tillekeratne
+author_profile: https://people.ce.pdn.ac.lk/students/e17/352/
+
 published_date: 2022-11-07
 
 gallery: true

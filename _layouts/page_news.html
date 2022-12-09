@@ -25,13 +25,25 @@ layout: wrappers_table
             </nav>
 
             <span class="h3 pb-0">{{ page.title }}</span><br>
-            <span class="text-muted">{{ page.published_date }}</span>
+            <span class="text-muted">
+                {{ page.published_date }}
+                {%- if page.author -%}
+                &nbsp;| Reported by <a href="{{ page.author_profile }}" target="_blank" class="text-decoration-none">{{
+                    page.author
+                    }}</a>
+                {%- endif -%}
+            </span>
             <hr>
 
             <div class="row pt-3">
                 {{ content }}
 
             </div>
+
+            {% if page.link_url %}
+            <a class="btn btn-sm btn-primary" href="{{ page.link_url }}" target="_blank">{{ page.link_caption }}</a>
+            {%- endif -%}
+
             {% if page.gallery == true %}
             <div class="mt-5 mb-3">
                 <h4 class="project-section-title">Gallery</h4>
