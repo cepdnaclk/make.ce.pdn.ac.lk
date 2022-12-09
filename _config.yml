@@ -1,5 +1,5 @@
 title: ESCAL MakerSpace Wiki
-baseurl: "/makerspace" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 
 author:
   name: NuwanJ
