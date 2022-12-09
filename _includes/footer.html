@@ -10,7 +10,18 @@ This is the footer used in every page
         <p class="text-center text-muted">
             <!-- <a class="text-decoration-none small footer-link" href="{{ '/documentation/' | relative_url }}">
                 Documentation</a> | -->
+            <a class="text-decoration-none small footer-link" href="{{ '/sitemap/' | relative_url }}">
+                Sitemap</a> |
             <span class="small">Last Build: {{site.time | date: "%d-%m-%Y" }}</span>
         </p>
     </div>
 </footer>
+
+{% if page.gallery -%}
+<script src="{{ '/assets/js/lightgallery-all.min.js' | relative_url }}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#lightgallery').lightGallery({ share: false, download: false });
+    });
+</script>
+{% endif -%}

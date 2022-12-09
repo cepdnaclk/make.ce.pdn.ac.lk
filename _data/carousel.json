@@ -1,0 +1,29 @@
+[
+  {
+    "display": false,
+    "image": "/assets/img/slide_1.jpg",
+    "alt": "Pera Swarm Robots",
+    "title": "Work Stations area of the MakerSpace Lab",
+    "subtitle": "",
+    "interval": 5000,
+    "dark": true
+  },
+  {
+    "display": true,
+    "image": "/assets/img/slide_2.jpg",
+    "alt": "Pera Swarm Robots",
+    "title": "Machine Room with Tools Board Setup",
+    "subtitle": "",
+    "interval": 5000,
+    "dark": true
+  },
+  {
+    "display": true,
+    "image": "/assets/img/slide_3.jpg",
+    "alt": "Robots while assemblying",
+    "title": "MakerSpace visit by the new students during E19 Induction Program",
+    "subtitle": "2022-10-06",
+    "interval": 5000,
+    "dark": true
+  }
+]

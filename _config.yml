@@ -1,9 +1,9 @@
 title: ESCAL MakerSpace Wiki
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 
 author:
   name: NuwanJ
-  email: nuwanjaliyagoda@gmail.com
+  email: nuwanjaliyagoda@eng.pdn.ac.lk
 
 description: > # this means to ignore newlines until "show_excerpts:"
   ""
@@ -22,7 +22,7 @@ plugins:
 ga_tracking: G-VX780EYHK1
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
-gh_edit_repository: "https://github.com/cepdnaclk/makerspace"
+gh_edit_repository: "https://github.com/cepdnaclk/make.ce.pdn.ac.lk"
 gh_edit_branch: "main"
 
 permalink: pretty

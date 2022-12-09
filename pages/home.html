@@ -1,0 +1,24 @@
+---
+layout: home
+title: Home
+permalink: /
+navbar_active: Home
+---
+{% include page_tree_builder.html pages=site.html_pages -%}
+
+<div class="container">
+
+    <!-- News -->
+    <h2 class="home-h2">
+        News
+        <a class="h5 text-muted text-link text-decoration-none" href="{% link news/index.html %}">
+            <i class="fa fa-link ms-2" aria-hidden="true"></i>
+        </a>
+    </h2>
+    {% include list_news.html %}
+
+    <!-- Layout -->
+    <h2 class="home-h2">Layout</h2>
+    <p><img class="img-fluid" src="/assets/img/MakerSpaceLayout.jpg" /></p>
+
+</div>

@@ -1,0 +1,39 @@
+---
+layout: default
+title: Stations
+permalink: /stations/
+navbar_active: Stations
+---
+{% include page_tree_builder.html pages=site.html_pages -%}
+
+<nav aria-label="breadcrumb pt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% link pages/home.html %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Stations</li>
+    </ol>
+</nav>
+
+<h2>Stations</h2>
+
+
+{%- assign station_list = pages_list | where: "parent", "Stations" -%}
+{% for station in station_list %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            {{ station.published_date }}
+        </div>
+        <div class="col">
+            <h5>
+                {{ station.title }}
+                <span class="text-muted small"></span>
+            </h5>
+            <p>
+                <a class="text-decoration-none pt-2" href="{{ station.permalink | relative_url }}">
+                    Read More
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endfor -%}

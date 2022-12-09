@@ -1,0 +1,35 @@
+---
+layout: default
+title: Sitemap
+permalink: /sitemap/
+navbar_active: Sitemap
+---
+{% include page_tree_builder.html pages=site.html_pages -%}
+
+<nav aria-label="breadcrumb" class="pb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% link pages/home.html %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sitemap</li>
+    </ol>
+</nav>
+<h2>Sitemap</h2>
+
+<!-- News -->
+<h4 class="pt-2">News</h4>
+<ul>
+    {%- assign news_list = pages_list | where: "parent", "News" | reverse -%}
+    {% for news in news_list %}
+    {% if news.title != "Dummy News" -%}
+    <li><a href="{{ news.permalink }}">{{ news.title }}</a></li>
+    {% endif -%}
+    {% endfor -%}
+</ul>
+
+<!-- Stations -->
+<h4 class="pt-2">Stations</h4>
+<ul>
+    {%- assign station_list = pages_list | where: "parent", "Stations" -%}
+    {% for station in station_list %}
+    <li><a href="{{ station.permalink }}">{{ station.title }}</a></li>
+    {% endfor -%}
+</ul>

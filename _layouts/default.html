@@ -1,22 +1,18 @@
 ---
-layout: table_wrapper
+layout: wrappers_table
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="en">
 
 <head>
     {% include meta.html %}
-
-    {%- include analytics.html -%}
-    
-    {%- include head.html -%}
-
+    <title>{{ page.title }} </title>
+    {% include header.html %}
 </head>
 
 <body>
     {% include navbar.html %}
-
     <div class="container vh-75">
         <div class="row">
             <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
@@ -24,8 +20,5 @@ layout: table_wrapper
             </div>
         </div>
     </div>
-
     {% include footer.html %}
-
 </body>
-</html>
