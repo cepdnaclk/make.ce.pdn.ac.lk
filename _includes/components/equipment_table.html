@@ -1,0 +1,41 @@
+<h4>Available Resources</h4>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>No</th>
+        <th>Item Code</th>
+        <th>Name</th>
+        <th>Documentation and Guide</th>
+    </tr>
+
+    {% assign items = site.data.stations[page.stationId] %}
+    {%- for item in items -%}
+    {%- if item.item_code != "" -%}
+    <tr>
+        <td></td>
+        <td>{{ item.item_code }}</td>
+        <td>{{ item.name }}</td>
+        <td>
+            <!-- Documaentation -->
+            {%- if item.guide.doc != "#" -%}
+            <span class=""><a href="{{ item.guide.doc }}">
+                    <img style="width: 32px;" src="{{ '/assets/img/icons/icon_doc.png' | relative_url }}" alt="Gloves">
+                    Documentation</a></span>
+            {%- endif -%}
+
+            <!-- Gloves -->
+            {%- if item.guide.gloves == "true" -%}
+            <span class="fa"><img style="width: 32px;" src="{{ '/assets/img/icons/icon_gloves.png' | relative_url }}"
+                    alt="Gloves"></span>
+            {%- endif -%}
+
+            <!-- Googles -->
+            {%- if item.guide.googles == "true" -%}
+            <span class="fa"><img style="width: 32px;" src="{{ '/assets/img/icons/icon_goggle.png' | relative_url }}"
+                    alt="Goggle"></span>
+            {%- endif -%}
+        </td>
+    </tr>
+    {%- endif -%}
+    {%- endfor -%}
+</table>
