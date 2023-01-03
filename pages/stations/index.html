@@ -19,9 +19,11 @@ navbar_active: Stations
 {%- assign station_list = pages_list | where: "parent", "Stations" | sort: "stationId" -%}
 {% for station in station_list %}
 <div class="container">
-    <div class="row">
-        <div class="col-sm-2">
+    <div class="row pb-3">
+        <div class="col-sm-4">
             {{ station.published_date }}
+            <img class="img img-thumbnail img-fluid " src="{{ station.image | relative_url }}"
+                alt="{{ station.title }}">
         </div>
         <div class="col">
             <h5>
@@ -30,7 +32,7 @@ navbar_active: Stations
             </h5>
             <p>
                 <a class="text-decoration-none pt-2" href="{{ station.permalink | relative_url }}">
-                    Read More
+                    View More
                 </a>
             </p>
         </div>
