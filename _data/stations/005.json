@@ -1,0 +1,57 @@
+[
+  {
+    "item_code": "EQ/21/1180",
+    "type": "EQ",
+    "name": "Universal Bench Vise",
+    "description": "",
+    "guide": {
+      "doc": "#",
+      "gloves": "true",
+      "googles": "false"
+    }
+  },
+  {
+    "item_code": "LO/32",
+    "type": "LO",
+    "name": "Screwdriver Rack",
+    "description": "",
+    "guide": {
+      "doc": "#",
+      "gloves": "false",
+      "googles": "false"
+    }
+  },
+  {
+    "item_code": "EQ/17/1078",
+    "type": "EQ",
+    "name": "Flexible Shaft Screwdriver",
+    "description": "",
+    "guide": {
+      "doc": "#",
+      "gloves": "false",
+      "googles": "false"
+    }
+  },
+  {
+    "item_code": "EQ/17/1079",
+    "type": "EQ",
+    "name": "Ratchet Screwdriver",
+    "description": "",
+    "guide": {
+      "doc": "#",
+      "gloves": "false",
+      "googles": "false"
+    }
+  },
+  {
+    "item_code": "EQ/17/1080",
+    "type": "EQ",
+    "name": "6pcs Precision Screwdriver Set",
+    "description": "",
+    "guide": {
+      "doc": "#",
+      "gloves": "false",
+      "googles": "false"
+    }
+  }
+]

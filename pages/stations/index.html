@@ -16,7 +16,7 @@ navbar_active: Stations
 <h2>Stations</h2>
 
 
-{%- assign station_list = pages_list | where: "parent", "Stations" -%}
+{%- assign station_list = pages_list | where: "parent", "Stations" | sort: "stationId" -%}
 {% for station in station_list %}
 <div class="container">
     <div class="row">
