@@ -10,6 +10,7 @@
 
     {% assign items = site.data.stations[page.stationId] %}
     {%- for item in items -%}
+    {%- if item.item_code != "" -%}
     <tr>
         <td></td>
         <td>{{ item.item_code }}</td>
@@ -35,5 +36,6 @@
             {%- endif -%}
         </td>
     </tr>
+    {%- endif -%}
     {%- endfor -%}
 </table>
