@@ -24,11 +24,15 @@
 
                 <li class="nav-item px-3"><a
                         class="nav-link {% if page.navbar_active == 'Documentation' %}active {% endif %}"
-                        href="{{ '/docs' | relative_url }}">Documentations</a></li>
+                        href="{{ '/gallery' | relative_url }}">Gallery</a></li>
 
                 <li class="nav-item px-3"><a
                         class="nav-link {% if page.navbar_active == 'Stations' %}active {% endif %}"
                         href="{{ '/stations' | relative_url }}">Stations</a></li>
+
+                <li class="nav-item px-3"><a
+                        class="nav-link {% if page.navbar_active == 'Documentation' %}active {% endif %}"
+                        href="{{ '/docs' | relative_url }}">Documentations</a></li>
 
                 <li class="nav-item px-3"><a class="nav-link {% if page.navbar_active == 'News' %}active {% endif %}"
                         href="{{ '/news' | relative_url }}">News</a></li>

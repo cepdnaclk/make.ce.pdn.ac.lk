@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Main Lab",
+        "description": "",
+        "date": "",
+        "images": [
+            {
+                "url": "/gallery/mainLab/1-min.jpg",
+                "caption": "Assembly Station"
+            },
+            {
+                "url": "/gallery/mainLab/2-min.jpg",
+                "caption": "Assembly Station"
+            },
+            {
+                "url": "/gallery/mainLab/3-min.jpg",
+                "caption": "Assembly Station"
+            },
+            {
+                "url": "/gallery/mainLab/4-min.jpg",
+                "caption": "Testing Station"
+            },
+            {
+                "url": "/gallery/mainLab/5-min.jpg",
+                "caption": "Soldering Station"
+            },
+            {
+                "url": "/gallery/mainLab/7-min.jpg",
+                "caption": "Soldering Station"
+            },
+            {
+                "url": "/gallery/mainLab/8-min.jpg",
+                "caption": "Measuring Station"
+            },
+            {
+                "url": "/gallery/mainLab/9-min.jpg",
+                "caption": "Measuring Station"
+            },
+            {
+                "url": "/gallery/mainLab/10-min.jpg",
+                "caption": "Measuring Station"
+            },
+            {
+                "url": "/gallery/mainLab/11-min.jpg",
+                "caption": "Measuring Station"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Machine Room",
+        "description": "",
+        "date": "",
+        "images": [
+            {
+                "url": "/gallery/machineRoom/1-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machineRoom/3-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machineRoom/4-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machineRoom/6-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machineRoom/5-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machineRoom/2-min.jpg",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Storage",
+        "description": "",
+        "date": "",
+        "images": [
+            {
+                "url": "/gallery/storage/1-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/storage/2-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/storage/3-min.jpg",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Machines",
+        "description": "",
+        "date": "",
+        "images": [
+            {
+                "url": "/gallery/machines/1-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machines/2-min.jpg",
+                "caption": ""
+            },
+            {
+                "url": "/gallery/machines/4-min.jpg",
+                "caption": ""
+            }
+        ]
+    }
+]
