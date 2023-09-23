@@ -1,24 +1,26 @@
 ---
 layout: default
-title: Stations
+title: Documents
 permalink: /docs/
-navbar_active: Documentation
+navbar_active: Docs
 ---
 {% include page_tree_builder.html pages=site.html_pages -%}
 
 <nav aria-label="breadcrumb pt-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% link pages/home.html %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Stations</li>
+        <li class="breadcrumb-item active" aria-current="page">Documents</li>
     </ol>
 </nav>
 
-<h2>Documentation</h2>
+<h2>Documents</h2>
 
-{%- assign docs = pages_list | where: "parent", "Docs" -%}
 
-<ul>
-    {% for doc in docs %}
-    <li><a href="{{ doc.permalink }}">{{ doc.title }}</a></li>
-    {% endfor -%}
-</ul>
+{%- assign documents_list = pages_list | where: "parent", "Documents" | sort: "title" -%}
+<div class="container">
+    <ul>
+        {% for document in documents_list %}
+        <li><a href="{{ document.permalink }}">{{ document.title}}</a></li>
+        {% endfor -%}
+    </ul>
+</div>
