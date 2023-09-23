@@ -4,6 +4,7 @@
     "type": "EQ",
     "name": "Universal Bench Vise",
     "description": "",
+    "link": "#",
     "guide": {
       "doc": "#",
       "gloves": "true",
@@ -15,6 +16,7 @@
     "type": "LO",
     "name": "Screwdriver Rack",
     "description": "",
+    "link": "#",
     "guide": {
       "doc": "#",
       "gloves": "false",
@@ -26,6 +28,7 @@
     "type": "EQ",
     "name": "Flexible Shaft Screwdriver",
     "description": "",
+    "link": "#",
     "guide": {
       "doc": "#",
       "gloves": "false",
@@ -37,6 +40,7 @@
     "type": "EQ",
     "name": "Ratchet Screwdriver",
     "description": "",
+    "link": "#",
     "guide": {
       "doc": "#",
       "gloves": "false",
@@ -48,6 +52,7 @@
     "type": "EQ",
     "name": "6pcs Precision Screwdriver Set",
     "description": "",
+    "link": "#",
     "guide": {
       "doc": "#",
       "gloves": "false",
