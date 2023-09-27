@@ -1,14 +1,64 @@
 ---
 layout: page
-title: CNC Router
+title: CNC Router User Guide
 parent: "Documents"
 permalink: /docs/cnc/
+navbar_active: Documentation
 ---
 
-<div class="d-flex align-self-center text-center vh-100">
-    <div class="container pt-5">
-        <div class="display-4">
-            This page is under construction
-        </div>
-    </div>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% link pages/home.html %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% link pages/docs/index.html %}">Docs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+</ol>
+
+<div class="container pt-3">
+
+    <h3>TTC3018S CNC User Guide</h3>
+
+    <table class="table table-striped table-hover pt-3">
+        <tr>
+            <td>Frame</td>
+            <td>Aluminum Alloy, Bakelite</td>
+        </tr>
+        <tr>
+            <td>Table Area</td>
+            <td>Approx. 400 * 330 * 240mm</td>
+        </tr>
+        <tr>
+            <td>Working Area</td>
+            <td>Approx. 300 * 180 * 40mm</td>
+        </tr>
+        <tr>
+            <td>Adapter Input Voltage</td>
+            <td>AC 110-240V 50/60Hz</td>
+        </tr>
+        <tr>
+            <td>Adapter Output Voltage</td>
+            <td>DC 24V 4A</td>
+        </tr>
+        <tr>
+            <td>Spindle Motor</td>
+            <td>775 Spindle Motor (12-36V) 24V: 10000r/min,36V: 12000r/min</td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="container pt-3">
+    <h4>Features</h4>
+    <ol>
+        <li>Aluminum Profile Stable Construction</li>
+        <li>3 Axis Movable, Adjustable Speed Spindle Motor</li>
+        <li>300 x 180 x 40mm Working Area, Meet Most Amateur DIY Needs</li>
+        <li>Engrave Wood, Plastic, Acrylic, PCB, or Similar Material</li>
+
+    </ol>
+</div>
+
+<div class="container pt-3">
+    <h4>Resources</h4>
+    <ul>
+        <li><a href="{{ '/assets/manuals/TTC3018S.pdf' | relative_url }}">TTC 3018S User Manual</a></li>
+    </ul>
 </div>
